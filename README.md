@@ -12,7 +12,11 @@ Integrate [@angular/language-service](https://www.npmjs.com/package/@angular/lan
 
 1. Change directory your project root.
 1. Install requirements via `npm install typescript @angular/language-service reflect-metadata`.
-1. 
+1. Execute the following script in your terminal:
+
+```sh
+curl 'https://raw.githubusercontent.com/Quramy/ng-tsserver/master/ng-tsserver' | bash
+```
 
 ## Uninstall
 
