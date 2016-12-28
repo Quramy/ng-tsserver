@@ -1,0 +1,26 @@
+CWD=$(pwd)
+BASEDIR=$(cd $(dirname $0); pwd)
+
+TYPESCRIPT_DIR=${CWD}/node_modules/typescript
+if [ -s "$1" ]; then
+  TYPESCRIPT_DIR=$1
+fi
+TSSERVER_FILE="${TYPESCRIPT_DIR}/lib/tsserver.js"
+TSSERVER_BK_FILE="${TSSERVER_FILE}.bk"
+
+if [ ! -f "${TSSERVER_FILE}" ]; then
+  echo "${TSSERVER_FILE} does not exist." >&2
+  echo "please execute the following: " >&2
+  echo "    npm install typescript" >&2
+  exit 1
+fi
+
+if [ ! -f "${TSSERVER_BK_FILE}" ]; then
+  cp ${TSSERVER_FILE} ${TSSERVER_BK_FILE}
+fi
+
+cat << EOF > ${TSSERVER_FILE}
+%%BEFORE_JS%%
+EOF
+
+cat ${TSSERVER_BK_FILE} >> ${TSSERVER_FILE}
