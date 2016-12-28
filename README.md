@@ -18,6 +18,13 @@ Integrate [@angular/language-service](https://www.npmjs.com/package/@angular/lan
 curl 'https://raw.githubusercontent.com/Quramy/ng-tsserver/master/ng-tsserver' | bash
 ```
 
+The above shell script rewrites tsserver installed locally. If you want to rewrite tsserver global installed, execute this:
+
+```sh
+curl 'https://raw.githubusercontent.com/Quramy/ng-tsserver/master/ng-tsserver' > ng-tsserver.sh
+bash ng-tsserver.sh ${$(which tsserver)/bin\/tsserver/node_modules\/typescript}
+```
+
 ## Uninstall
 
 You can recover the original `tsserver.js` via:
