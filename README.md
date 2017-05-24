@@ -23,7 +23,7 @@ Integrate [@angular/language-service](https://www.npmjs.com/package/@angular/lan
 
 ## Install
 
-**Your editor's TypeScript plugin should uses tsserver** because we need rewrite `tsserver.js` to integrate with the Angular's language service, please check out [TypeScript Editor Support](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).
+**Your editor's TypeScript plugin should use tsserver** because we need rewrite `tsserver.js` to integrate with the Angular's language service, please check out [TypeScript Editor Support](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).
 
 1. Change directory your project root.
 1. Install requirements via `npm install typescript @angular/language-service reflect-metadata`.
